@@ -1,0 +1,22 @@
+{
+  "name": "v-m-eth3",
+  "version": "1.0.0",
+  "description": "learning how build a virtual machine similar to ethereum virtual machine",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.9.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@ethersproject/bytes": "^5.7.0",
+    "arg": "^5.0.2",
+    "ts-node": "^10.9.1"
+  }
+}
