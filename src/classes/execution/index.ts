@@ -1,11 +1,9 @@
-import { isHexString, arrayify, hexlify } from "@ethersproject/bytes"
+import {isHexString, arrayify, hexlify } from "@ethersproject/bytes";
 import Memory from "../memory";
 import Stack from "../stack";
 import { InvalidBytecode, InvalidProgramCounterIndex, UnknownOpcode } from "./errors";
 import Instruction from "../instruction";
 import Opcodes from "../../opcodes";
-
-
 
 
 class ExecutionContext {
@@ -16,7 +14,7 @@ class ExecutionContext {
     private stopped: boolean;
 
     constructor(code: string) {
-        if(isHexString(code) || code.length % 2 !== 0) 
+        if(!isHexString(code) || code.length % 2 !== 0) 
         throw new InvalidBytecode();
         this.code = arrayify(code);
         this.stack = new Stack();
